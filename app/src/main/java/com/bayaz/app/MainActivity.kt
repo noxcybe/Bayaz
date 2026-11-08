@@ -11,12 +11,13 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.bayaz.app.ui.theme.BayazTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MaterialTheme {
+            BayazTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -34,6 +35,9 @@ fun Greeting() {
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.Center
     ) {
-        Text(text = "Every life leaves a story.\nKeep yours in Bayaz.")
+        Text(
+            text = "Every life leaves a story.\nKeep yours in Bayaz.",
+            color = MaterialTheme.colorScheme.onBackground
+        )
     }
 }
